@@ -13,6 +13,7 @@
 		"sort-packages": true
 	},
 	"require": {
+		"demo/sitepackage": "dev-main",
 		"helhum/typo3-console": "^7.0.2",
 		"typo3/cms-backend": "^11.5.0",
 		"typo3/cms-belog": "^11.5.0",
@@ -39,6 +40,12 @@
 		"typo3/cms-tstemplate": "^11.5.0",
 		"typo3/cms-viewpage": "^11.5.0"
 	},
+	"repositories": [
+		{
+			"type": "path",
+			"url": "packages/extensions/*"
+		}
+	],
 	"scripts":{
 		"typo3-cms-scripts": [
 			"typo3cms install:fixfolderstructure"
@@ -46,5 +53,7 @@
 		"post-autoload-dump": [
 			"@typo3-cms-scripts"
 		]
-	}
+	},
+	"minimum-stability": "dev",
+	"prefer-stable": true
 }
